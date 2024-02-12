@@ -6,7 +6,7 @@ LABEL authors="Partisia"
 ##ARG EXAMPLE_VERSION=
 USER 0
 
-RUN cargo install cargo-partisia-contract
+RUN cargo install --locked cargo-partisia-contract
 
 COPY --from=node:18 /usr/local/bin/ /usr/local/bin
 COPY --from=node:18 /usr/local/lib/ /usr/local/lib
